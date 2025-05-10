@@ -14,7 +14,7 @@ export type Restaurant = {
 
 export default function RestaurantCard({ id, name, tags, thumbnail, favorite }: Restaurant) {
   return (
-    <Card>
+    <Card className="border bg-background border-primary/20 transition-shadow hover:shadow-md">
       <CardContent className="flex items-start gap-4 p-4">
         {/* サムネイル */}
         <Link href={`/restaurants/${id}`} className="block h-14 w-14 shrink-0 overflow-hidden rounded-md bg-muted">

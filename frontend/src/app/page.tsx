@@ -22,7 +22,7 @@ export default async function Home() {
       <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 pt-4">
         {/* 行きたい／行ったタブ */}
         <Tabs defaultValue="wishlist" className="w-full">
-          <TabsList className="mb-4 flex w-full overflow-hidden rounded-lg bg-muted p-1">
+          <TabsList className="mb-4 flex w-full overflow-hidden rounded-lg bg-primary/10 p-1">
             <TabsTrigger value="wishlist" className="flex-1">
               行きたい
             </TabsTrigger>

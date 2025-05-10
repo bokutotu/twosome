@@ -4,20 +4,13 @@ import { useState } from "react"
 import { Heart } from "lucide-react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"          // shadcn/ui のユーティリティ
 
 type Props = {
-  /** 店舗 ID。後で API に渡す用だがモックでは未使用 */
   id: string
-  /** 初期のお気に入り状態 */
   initial?: boolean
 }
 
-/**
- * お気に入りトグル（モック版）
- * - クリックでローカル state を切り替え
- * - Sonner の toast() でフィードバック
- * - API 通信はまだ行わない
- */
 export default function FavoriteToggle({ id, initial = false }: Props) {
   const [fav, setFav] = useState(initial)
 
@@ -36,7 +29,12 @@ export default function FavoriteToggle({ id, initial = false }: Props) {
       onClick={toggle}
     >
       <Heart
-        className="size-4 transition-colors"
+        /* ★ アクティブ時は text-accent で着色 */
+        className={cn(
+          "size-4 transition-colors",
+          fav ? "text-accent" : "text-muted-foreground"
+        )}
+        /* ★ fill は currentColor に合わせる */
         fill={fav ? "currentColor" : "none"}
       />
     </Button>

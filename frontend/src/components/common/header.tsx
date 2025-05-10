@@ -1,20 +1,19 @@
-import Link from "next/link"
+import Link   from "next/link"
 import { Search, User } from "lucide-react"
-import { Input } from "@/components/ui/input"
+import { Input }  from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { cn }     from "@/lib/utils"        // 既に入っていれば省略可
 
-/**
- * ページ最上部のヘッダー。
- * 背景は画面幅いっぱいに伸ばしつつ、
- * 内側のコンテンツは max-w-4xl に収めて中央寄せ。
- */
+
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b bg-background/75 backdrop-blur">
-      {/* ★ここをコンテナにする */}
+    <header
+      /* 背景は半透明・ボーダーは薄い */
+      className="sticky top-0 z-30 border-b border-border/60 bg-background/75 backdrop-blur-md"
+    >
       <div className="mx-auto flex w-full max-w-6xl items-center gap-4 px-4 py-2">
-        {/* ロゴ */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        {/* --------------- Logo --------------- */}
+        <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Home">
           <img src="/twosome_icon.svg" alt="twosome icon" className="h-6 w-6" />
           <img
             src="/twosome_wordmark.svg"
@@ -23,7 +22,7 @@ export default function Header() {
           />
         </Link>
 
-        {/* 検索フォーム */}
+        {/* --------------- Search --------------- */}
         <form
           action="/search"
           method="GET"
@@ -33,21 +32,31 @@ export default function Header() {
             name="q"
             id="q"
             placeholder="店名・URL を検索"
-            className="flex-1"
+            className={cn(
+              "flex-1",
+              /* フォーカスリングを brand 色で統一 */
+              "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-0"
+            )}
             required
           />
-          <Button type="submit" size="icon" variant="ghost" aria-label="検索">
+          <Button
+            type="submit"
+            size="icon"
+            variant="ghost"
+            aria-label="検索"
+            className="text-muted-foreground hover:text-primary"
+          >
             <Search className="size-5" />
           </Button>
         </form>
 
-        {/* ユーザーアイコン（モック） */}
+        {/* --------------- Profile --------------- */}
         <Link
           href="/profile"
-          className="ml-2 flex h-8 w-8 items-center justify-center rounded-full bg-muted/40"
           aria-label="プロフィール"
+          className="ml-2 flex h-8 w-8 items-center justify-center rounded-full bg-muted/40 text-muted-foreground transition-colors hover:bg-muted/60"
         >
-          <User className="size-5 text-muted-foreground" />
+          <User className="size-5" />
         </Link>
       </div>
     </header>

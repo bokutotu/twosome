@@ -26,8 +26,7 @@ export function HashtagList({ tags, className }: HashtagListProps) {
       {tags.map((tag) => (
         <li key={tag}>
           <Badge
-            variant="secondary"            // 淡色バッジ
-            className="rounded-full px-2 py-0.5 text-xs font-medium"
+            variant="secondary" className="bg-secondary/30 text-foreground"
           >
             #{tag}
           </Badge>
