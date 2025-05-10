@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="70" viewBox="0 0 280 70" role="img" aria-label="twosome wordmark">
+  <style>
+    /* Use a geometric sans‑serif; users can tweak or outline later */
+    .text { font: 700 56px/1 'Montserrat','Inter','Helvetica Neue',Arial,sans-serif; fill:#1f2937; }
+  </style>
+  <text x="0" y="56" class="text">twosome</text>
+</svg>
