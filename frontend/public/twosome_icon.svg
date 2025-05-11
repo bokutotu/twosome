@@ -1,7 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64" role="img" aria-label="twosome icon">
-  <!-- Outer circle -->
-  <circle cx="32" cy="32" r="32" fill="#3EA8FF"/>
-  <!-- Two overlapping circles suggesting a pair -->
-  <circle cx="24" cy="26" r="10" fill="white"/>
-  <circle cx="40" cy="38" r="10" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="48" viewBox="0 0 53 48" fill="none">
+  <!-- Background placeholder (transparent) -->
+  <rect width="240" height="48" fill="transparent"/>
+
+  <!-- Icon: two overlapping plates (abstract food / pair) -->
+  <!-- Left plate – Soft Mustard (#D4A85F) -->
+  <circle cx="28" cy="24" r="12" fill="#D4A85F" />
+  <!-- Right plate – Terra‑cotta Accent (#C8563C) slightly transparent so overlap is visible -->
+  <circle cx="40" cy="24" r="12" fill="#C8563C" fill-opacity="0.9" />
 </svg>
+

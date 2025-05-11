@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <header
       /* 背景は半透明・ボーダーは薄い */
-      className="sticky top-0 z-30 border-b border-border/60 bg-background/75 backdrop-blur-md"
+      className="sticky top-0 z-30 border-b border-border/60 bg-background backdrop-blur-md"
     >
       <div className="mx-auto flex w-full max-w-6xl items-center gap-4 px-4 py-2">
         {/* --------------- Logo --------------- */}
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Home">
-          <img src="/twosome_icon.svg" alt="twosome icon" className="h-6 w-6" />
+          <img src="/twosome_icon.svg" alt="twosome icon" className="w-13" />
           <img
             src="/twosome_wordmark.svg"
             alt="twosome wordmark"
