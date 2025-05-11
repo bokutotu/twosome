@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Heart } from "lucide-react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"          // shadcn/ui のユーティリティ
+import { cn } from "@/lib/utils"
 
 type Props = {
   id: string

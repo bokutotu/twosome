@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
-import { HashtagList } from "@/components/common/hastagList"
-import FavoriteToggle from "./favToggle"
+import HashtagList from "@/components/common/hashtag-list"
+import FavoriteToggle from "./fav-toggle"
 
 export type Restaurant = {
   id: string

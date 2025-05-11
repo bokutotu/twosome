@@ -1,4 +1,4 @@
-import RestaurantCard, { Restaurant } from "./restaurantCard"
+import RestaurantCard, { Restaurant } from "./restaurant-card"
 
 export default function RestaurantList({ restaurants }: { restaurants: Restaurant[] }) {
   if (!restaurants.length)

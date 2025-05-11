@@ -6,7 +6,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import RestaurantList from "@/home/restaurantList"
+import RestaurantList from "@/home/restaurant-list"
 import { Suspense } from "react"
 
 export default async function Home() {

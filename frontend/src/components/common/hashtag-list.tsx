@@ -18,7 +18,7 @@ export interface HashtagListProps {
  * <HashtagList tags={['イタリアン', 'ボリューム', 'ピザ']} />
  * ```
  */
-export function HashtagList({ tags, className }: HashtagListProps) {
+export default function HashtagList({ tags, className }: HashtagListProps) {
   if (!tags?.length) return null
 
   return (
