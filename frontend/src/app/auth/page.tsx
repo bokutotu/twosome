@@ -1,26 +1,28 @@
-import { login, loginWithProvider, signup } from './actions'
+"use client";
+import { Separator } from "@/components/ui/separator";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import EmailAuthForm from "@/auth/email-auth";
+import ProviderButtons from "@/auth/provider-buttons";
 
 export default function LoginPage() {
   return (
-    <div>
-      <form>
-        <label htmlFor="email">Email:</label>
-        <input id="email" name="email" type="email" required />
-        <label htmlFor="password">Password:</label>
-        <input id="password" name="password" type="password" required />
-        <button formAction={login}>Log in</button>
-        <button formAction={signup}>Sign up</button>
-      </form>
-
-      <form action={loginWithProvider}>
-        <label htmlFor="provider">Provider:</label>
-        <select id="provider" name="provider">
-          <option value="github">GitHub</option>
-          <option value="google">Google</option>
-          <option value="twitter">Twitter</option>
-        </select>
-        <button type="submit">Log in with provider</button>
-      </form>
-    </div>
-  )
+    <main className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 px-4">
+      <Card className="w-full max-w-md shadow-xl rounded-2xl">
+        <CardHeader className="text-center space-y-1">
+          <CardTitle className="text-2xl font-bold tracking-tight">
+            Twosome アカウント
+          </CardTitle>
+          <p className="text-sm text-muted-foreground">
+            ログイン / 新規登録
+          </p>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <EmailAuthForm />
+          <Separator label="または" className="my-2" />
+          <ProviderButtons />
+        </CardContent>
+      </Card>
+    </main>
+  );
 }
+

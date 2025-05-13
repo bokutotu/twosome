@@ -51,7 +51,6 @@ export async function loginWithProvider(formData: FormData) {
     const provider = formData.get('provider') as Provider
 
     const redirectTo = `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`
-    console.log('Redirecting to:', redirectTo)
 
     const { error, data } = await supabase.auth.signInWithOAuth({
         provider: provider,
